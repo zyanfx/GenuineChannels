@@ -36,6 +36,8 @@ Thumbs.db
 *.xap
 *.nupkg
 obj/
+obj.fx35/
+obj.fx46/
 .vs/
 [Rr]elease*/
 _ReSharper*/
