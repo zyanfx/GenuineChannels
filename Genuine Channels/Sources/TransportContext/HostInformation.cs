@@ -213,7 +213,7 @@ namespace Belikov.GenuineChannels.TransportContext
 
 				if (checkHostInfoVersion && this.RemoteHostUniqueIdentifier != remoteHostUniqueIdentifier || (this._uri != null && this._uri != uri))
 				{
-					if (this.RemoteHostUniqueIdentifier != -1)
+					if (this.RemoteHostUniqueIdentifier != -1 && GenuineUtility.NewSessionDetectedExceptionEnabled)
 					{
 						exception = GenuineExceptions.Get_Receive_NewSessionDetected();
 

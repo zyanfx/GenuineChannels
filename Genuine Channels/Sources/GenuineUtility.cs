@@ -1106,6 +1106,10 @@ namespace Belikov.GenuineChannels
 			}
 		}
 
+		/// <summary>
+		/// Gets or sets a value indicating whether the new session detection should throw the warning exception.
+		/// </summary>
+		public static bool NewSessionDetectedExceptionEnabled { get; set; } = true;
 
 #if DEBUG
 

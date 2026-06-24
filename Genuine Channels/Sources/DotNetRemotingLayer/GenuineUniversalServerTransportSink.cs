@@ -227,8 +227,8 @@ namespace Belikov.GenuineChannels.DotNetRemotingLayer
 						// LOG: put down the log record
 						if ( binaryLogWriter != null && binaryLogWriter[LogCategory.MessageProcessing] > 0 )
 						{
-							string invocationTarget = responseMsg.Properties["__Uri"] as string;
-							string methodName = BinaryLogWriter.ParseInvocationMethod(responseMsg.Properties["__MethodName"] as string, responseMsg.Properties["__TypeName"] as string);
+							string invocationTarget = responseMsg?.Properties["__Uri"] as string;
+							string methodName = BinaryLogWriter.ParseInvocationMethod(responseMsg?.Properties["__MethodName"] as string, responseMsg?.Properties["__TypeName"] as string);
 							binaryLogWriter.WriteMessageCreatedEvent("GenuineUniversalServerTransportSink.HandleIncomingMessage",
 								LogMessageType.MessageCreated, null, reply, false, reply.Recipient,
 								binaryLogWriter[LogCategory.MessageProcessing] > 1 ? reply.Stream : null,
